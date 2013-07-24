@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="utf-8" />
+    <title>Gallery - Ace Admin</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <meta name="description" content="responsive photo gallery using colorbox" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+    <!--fonts-->
+    <link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+    <!--ace styles-->
+    <link rel="stylesheet" href="assets/css/ace.min.css" />
+    
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+    <![endif]-->
+
+    <!--inline styles related to this page-->   
+  </head>
+  <body class="skin-4">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a href="#" class="brand">
+            <small>
+              <i class="icon-leaf"></i>
+              Ace Admin
+            </small>
+          </a><!--/.brand-->          
+        </div><!--/.container-fluid-->
+      </div><!--/.navbar-inner-->
+    </div>
+    <div class="main-container container-fluid">
+      <a class="menu-toggler" id="menu-toggler" href="#">
+        <span class="menu-text"></span>
+      </a>
+
+      <div class="sidebar" id="sidebar">
+        <ul class="nav nav-list">
+          <li>
+            <a href="#">
+              <i class="icon-dashboard"></i>
+              <span class="menu-text"> Oversigt </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="icon-text-width"></i>
+              <span class="menu-text"> Medlemmer </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="dropdown-toggle">
+              <i class="icon-desktop"></i>
+              <span class="menu-text"> Rapporter </span>
+
+              <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+              <li>
+                <a href="#">
+                  <i class="icon-double-angle-right"></i>
+                  Rapport 1
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="icon-double-angle-right"></i>
+                  Rapport 2
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="icon-double-angle-right"></i>
+                  Rapport 3
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="icon-list"></i>
+              <span class="menu-text"> Tilbud &amp; Kampagner</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="icon-list-alt"></i>
+              <span class="menu-text"> Indstillinger </span>
+            </a>
+          </li>
+        </ul><!--/.nav-list-->
+
+        <div class="sidebar-collapse" id="sidebar-collapse">
+          <i class="icon-double-angle-left"></i>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="breadcrumbs" id="breadcrumbs">
+          <ul class="breadcrumb">
+            <li>
+              <i class="icon-home home-icon"></i>
+              <a href="#">Hjem</a>
+
+              <span class="divider">
+                <i class="icon-angle-right arrow-icon"></i>
+              </span>
+            </li>
+            <li class="active">Aktiv side</li>
+          </ul><!--.breadcrumb-->
+
+          <div class="nav-search" id="nav-search">
+            <form class="form-search">
+              <span class="input-icon">
+                <input type="text" placeholder="Søg ..." class="input-small nav-search-input" id="nav-search-input" autocomplete="off" />
+                <i class="icon-search nav-search-icon"></i>
+              </span>
+            </form>
+          </div><!--#nav-search-->
+        </div>
+
+        <div class="page-content">
+          <div class="page-header position-relative">
+            <h1>
+              Hoveside
+              <small>
+                <i class="icon-double-angle-right"></i>
+                administrationsportal for butikker
+              </small>
+            </h1>
+          </div><!--/.page-header-->
+
+          <div class="row-fluid">
+            <div class="span12">
+              <!--PAGE CONTENT BEGINS-->
+
+              <div class="row-fluid">
+                <%= yield %>
+              </div><!--PAGE CONTENT ENDS-->
+            </div><!--/.span-->
+          </div><!--/.row-fluid-->
+        </div><!--/.page-content-->       
+      </div><!--/.main-content-->
+    </div><!--/.main-container-->
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-small btn-inverse">
+      <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+  </body>
+</html>
